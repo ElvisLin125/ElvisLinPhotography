@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="description" content="Elvis Ma's Film Portfolio"/>
+		<title>Videos</title>
+		<link rel="stylesheet" type="text/css" href="ElvisMa.css" />
+		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+		<link rel="shortcut icon" href="web/favicon.ico" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+			//https://css-tricks.com/play-button-youtube-and-vimeo-api/
+			function playVideo(vid) {
+				var vid = document.getElementById(vid);
+				vid.src = vid.src + "?autoplay=1";
+			}
+		</script>
+	</head>
+	<body>
+		<a href="index.html"><h1 class="pageHead"></h1></a>
+		<nav>
+			<p class="mainnav">
+		
+				<a href="aboutme.html">About</a> |
+				<a href="portfolio.html">Portfolio</a> |
+				<a href="videos.html">Videos</a> |
+				<a href="contact.html">Contact</a>
+			</p>
+		</nav>
+		<center><h1 class="pageHeader">VIDEOS</h1></center>
+		<div id="videoParallax">
+			<div class="parallax-inner">
+				<h1>FILMS</h1>
+			</div>
+		</div>
+		<div class="videoList">
+			<div onclick="this.nextElementSibling.style.display='block'; this.style.display='none';playVideo('beachVideo')">
+				<center><img src="thumbnail/beach.jpg" style="cursor:pointer" width=" 960px" height="540px" /></center>
+			</div>
+			<div style="display:none">
+				<iframe id="beachVideo" src="https://www.youtube.com/embed/LG9919_G1wM" class="videos"></iframe>
+			</div>
+			<div onclick="this.nextElementSibling.style.display='block'; this.style.display='none';playVideo('broadVideo')">
+				<center><img src="thumbnail/broad.jpg" style="cursor:pointer" width=" 960px" height="540px" /></center>
+			</div>
+			<div style="display:none">
+				<iframe id="broadVideo" src="https://www.youtube.com/embed/mLyCxpMCnsc" class="videos"></iframe>
+			</div>
+			<div onclick="this.nextElementSibling.style.display='block'; this.style.display='none'; this.style.transition='all .2s ease-in-out'; playVideo('outsideVideo')">
+				<center><img src="thumbnail/outside.jpg" style="cursor:pointer" width=" 960px" height="540px" /></center>
+			</div>
+			<div style="display:none">
+				<iframe  id="outsideVideo" src="https://www.youtube.com/embed/I5QNd0xFUnU" class="videos"></iframe>
+			</div>
+			
+			<div onclick="this.nextElementSibling.style.display='block'; this.style.display='none'; playVideo('aztechVideo')">
+				<center><img src="thumbnail/aztechdesign.jpg" style="cursor:pointer" width=" 960px" height="540px" /></center>
+			</div>
+			<div style="display:none">
+				<iframe id="aztechVideo" src="https://www.youtube.com/embed/3y4-1AQR2SU" class="videos"></iframe>
+			</div>
+			
+			<div onclick="this.nextElementSibling.style.display='block'; this.style.display='none';playVideo('pennyVideo')">
+				<center><img src="thumbnail/penny.jpg" style="cursor:pointer" width=" 960px" height="540px" /></center>
+			</div>
+			<div style="display:none">
+				<iframe id="pennyVideo" src="https://www.youtube.com/embed/smIzSJRW_CQ" class="videos"></iframe>
+			</div>
+		</div>
+		<center><div id="sub1"><iframe id="fr" scrolling="no" src="https://www.youtube.com/subscribe_widget?p=darkmagicmaster321" style="border: none;background: white; height: 100px;overflow-x: hidden; overflow-y: hidden; width: 300px;"></iframe></div></center>
+		<div id="musicParallax">
+			<div class="parallax-inner">
+				<h1>MUSIC</h1>
+			</div>
+		</div>
+		<div class="videoList">
+			<iframe src="https://www.youtube.com/embed/tCAwX2Blh5M" class="videos"></iframe>
+			<iframe src="https://www.youtube.com/embed/qIO7aot6gRI" class="videos"></iframe>
+			<iframe src="https://www.youtube.com/embed/JnTMUK5usO0" class="videos"></iframe>
+			<iframe src="https://www.youtube.com/embed/bkFCTaDRZac" class="videos"></iframe>
+			<iframe src="https://www.youtube.com/embed/mJcE2garhCg" class="videos"></iframe>
+			<iframe src="https://www.youtube.com/embed/nd8Rl1tpHMM" class="videos"></iframe>
+		</div>
+		<center><div id="sub1"><iframe id="fr" scrolling="no" src="https://www.youtube.com/subscribe_widget?p=kjY0H5oNq7A0kk4qDx7S7A" style="border: none;background: white; height: 100px;overflow-x: hidden; overflow-y: hidden; width: 300px;"></iframe></div></center>
+	</body>
+</html>

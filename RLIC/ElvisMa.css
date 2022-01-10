@@ -1,0 +1,271 @@
+body{
+	background-repeat: no-repeat;
+	background-size:cover;
+	margin: 0;
+	padding: 0;
+}
+table, col{
+	margin: 0 auto;
+}
+input :focus {outline:none;}
+#home{
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 30px;
+	padding-top: 80px;
+	color:white; 
+	position: center; 
+}
+#logo{
+	max-width:90%;
+	max-height:90%;
+	margin: 0 auto;
+	content:url("web/logo.png"); 
+	margin-top: 10em;
+}
+#homePage {
+	background-image: url("web/starsOptimized.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 100%;
+}
+#mypicture {
+	content: url("me.jpg");
+	float: right;
+	width: 50%;
+	padding-right: 10px;
+}
+#buttonPo{
+	font:30px "Oswald", sans-serif; 
+	background-color: transparent;
+	border: 2px solid white;
+	color: white;
+}
+#buttonNav{
+	padding-top:50px;
+}
+#portfolioNav {
+	text-align: center;	
+	padding-top: 50px;
+	font:30px "Oswald", sans-serif; 
+	width: 400px;
+}
+#portfolioNav a:link, #portfolioNav a:visited{
+	color: white;
+	text-decoration: none;
+	border: 1px solid white;
+}
+#portfolioNav a:hover {
+	background-color: white;
+	color: black;
+	text-decoration: none;
+	border: 1px solid white;
+}
+#email {
+	width: 128px;
+}
+#contactNav {
+	padding-top: 50px;
+}
+#myVideo {
+  position: fixed;
+
+  z-index: -1;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+
+}
+#aboutMe {
+	text-align: center;
+	width: 50%;
+	margin: 0 auto;
+	padding-bottom: 116px;
+	padding-top: 116px;
+}
+#contactInstruct {
+	text-align: center;
+	width: 50%;
+	margin: 0 auto;
+}
+#myPhoto {
+	max-width: 100%;
+}
+#aboutParallax {
+	background: url("parallax/elvis.jpg") no-repeat center fixed;
+	background-size: cover;
+	margin: 0 auto;
+	max-width: 100%;
+	padding: 40px;
+}
+#equipmentParallax {
+	background: url("parallax/STREETSIGN.jpg") no-repeat center fixed;
+	background-size: cover;
+	margin: 0 auto;
+	max-width: 100%;
+	padding: 40px;
+	z-index: -1;
+}
+#videoParallax {
+	background: url("parallax/phone.jpg") no-repeat center fixed;
+	background-size: cover;
+	margin: 0 auto;
+	max-width: 100%;
+	padding: 40px;
+}
+#musicParallax {
+	background: url("parallax/guitar.jpg") no-repeat center fixed;
+	background-size: cover;
+	margin: 0 auto;
+	max-width: 100%;
+	padding: 40px;
+}
+#portfolioParallax {
+	background: url("parallax/bokeh.jpg") no-repeat center fixed;
+	background-size: cover;
+	margin: 0 auto;
+	max-width: 100%;
+	padding: 40px;	
+	margin-bottom: 20px;
+}
+
+#toolsDiv {
+	text-align: center;
+	z-index: 1;
+}
+#contactParallax {
+	background: url("parallax/bokeh2.jpg") no-repeat center fixed;
+	background-size: cover;
+	margin: 0 auto;
+	max-width: 100%;
+	padding: 40px;
+}
+#italicize {
+	font-style: italic;
+}
+#contactForm input , #inputMessage{
+		border: 1px solid black;
+		border-radius: 8px;	
+		padding: 10px;
+		outline: none;
+		width: 500px;
+}
+#contactForm {
+	width: 50%;
+	margin-top: 50px;
+}
+#contactForm h1 {
+	text-align: center;
+}
+.mainnav {
+	position: relative;
+	text-align: center;
+	padding-bottom: 30px;
+	text-decoration: none;
+	font: 25px "Oswald", sans-serif; 
+}
+.mainnav a:link {
+	color: gray;
+	text-decoration: none;
+}
+.mainnav a:visited {
+	color: gray;
+	text-decoration: none;
+}
+.mainnav a:hover{
+	color: black;
+	text-decoration: none;
+}
+.mainnav .current{
+	color: black;
+	text-decoration: none;
+}
+.videoList {
+	padding: 40px;
+}
+.equipment{
+	list-style-position: inside;
+	text-align: left;
+	font-family: 'Open Sans', sans-serif;
+}
+.equipmentDiv{
+	width: 250px;
+	height: 350px;
+	border: 1px solid white;
+	background-color: rgba(0,0,0,0.5);
+	display: inline-block;	
+	vertical-align: top;
+	margin: 10px;
+}
+.equipmentTitle {
+	text-align: center;
+}
+.parallax-inner {
+	text-align: center;
+	color: white;
+}
+.parallax-inner h1{
+	letter-spacing: 10px;
+	font:100px "Oswald", sans-serif; 
+}
+.pageHeader{
+	font:100px "Oswald", sans-serif; 
+	text-align: center;
+	padding-top: 0.5em;
+	display: none;	
+}
+.pageHead{
+	font:100px "Lato", sans-serif; 
+	content: url("web/blacklogo.png");
+	max-width:50%;
+	margin: 0 auto;
+	position: relative;
+	padding-left: 0.05em;
+}
+.contact{
+	color:black;
+	text-align:center;
+	position: center-left;
+	font-weight: bold;
+}
+.mediaName {
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+}
+.maintext{
+	padding-left: 5px;
+	font-family: 'Open Sans', sans-serif;
+	text-align: justify;
+}
+.name {
+	font:30px "Oswald", sans-serif; 
+	font-size: 50px;
+}
+.mediaPic {
+	padding: 5px;
+	
+}
+.portraits img{
+	width: 25%;
+	padding: 10px;
+}
+.landscapes img{
+	width: 37.667%;
+	padding: 20px;
+}
+.information, textarea{
+	border: 1px solid black;
+	border-radius: 8px;	
+	padding: 10px;
+	resize: none;
+	outline: none;
+	width: 300px;
+}
+.videos {
+	width: 960px;
+	height: 540px;
+	border: none;
+	margin: 0 auto;
+	display: block;
+	padding: 10px;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="description" content="Elvis Ma's Photography Portfolio"/>
+		<title>Portfolio</title>
+		<link rel="stylesheet" type="text/css" href="ElvisMa.css" />
+		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+		<link rel="shortcut icon" href="web/favicon.ico" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+			var slideshow = ["portfolio/neoncastleOptimized.jpg","portfolio/bokehOptimized.jpg", "portfolio/edwinbokehOptimized.jpg", "parallax/bokeh.jpg"];
+			var currentImage;
+			var counter= 0;
+			
+			function enlargeImage(id) {
+				id.style.transition = "all .2s ease-in-out";
+				id.style.transform = "scale(1.05)";
+			}
+			function unlargeImage(id) {
+				id.style.transition = "all .2s ease-in-out";
+				id.style.transform = "scale(1)";
+			}
+			function startSlideshow(imageArray) {
+				if (counter >= imageArray.length) {
+					counter = 0;
+				}
+				currentImage = imageArray[counter];
+				//console.log(currentImage);
+				if (currentImage == "parallax/bokeh.jpg") {
+					document.getElementById("portfolioParallax").style.background = "url('" +currentImage+ "')  no-repeat center fixed";
+				} else {
+					document.getElementById("portfolioParallax").style.background = "url('" +currentImage+ "')  fixed";
+				}
+				counter++;
+			}
+			function fadeBackground() {
+				$('#portDiv').fadeIn();
+				$('#portfolioParallax').fadeIn();
+				$('#portLogo').fadeIn();
+				$('#portNav').fadeIn();
+			}
+			window.onload = function() {
+				fadeBackground();
+				var slideshowTimer = setInterval(function(){startSlideshow(slideshow);}, 2000);
+			}
+			
+		</script>
+	</head>
+	<body>
+		<a href="index.html"><h1 class="pageHead" id="portLogo"></h1></a>
+		<nav id="portNav">
+			<p class="mainnav">
+				<a href="aboutme.html">About</a> |
+				<a class="current" href="portfolio.html">Portfolio</a> |
+				<a href="videos.html">Videos</a> |
+				<a href="contact.html">Contact</a>
+			</p>
+		</nav>
+		<div id="portfolioParallax">
+			<div class="parallax-inner">
+				<h1>PORTFOLIO</h1>
+			</div>
+		</div>
+		<div id="portDiv">
+			<center>
+				<div class="portraits">
+					<a href="https://www.instagram.com/p/BYC7zZTgqqB/?taken-by=elvis._.ma" target="_blank">
+						<img src="portfolio/candles0Optimized.jpg" id="candle" alt="big candles from Hong Kong" onmouseover="enlargeImage(this)" onmouseout="unlargeImage(this)" />
+					</a>
+					<a href="https://www.instagram.com/p/BY99_WyAbSt/?taken-by=elvis._.ma" target="_blank">
+						<img src="portfolio/katsuariel1Optimized.jpg" alt="overhead photo of a Shiba Inu dog" onmouseover="enlargeImage(this)" onmouseout="unlargeImage(this)"/>
+					</a>
+					<a href="https://www.instagram.com/p/BYr7pFxAVlu/?taken-by=elvis._.ma" target="_blank">
+						<img src="portfolio/davidsunset1Optimized.jpg" alt="man walking into ocean with sunset" onmouseover="enlargeImage(this)" onmouseout="unlargeImage(this)"/>
+					</a>							
+				</div>
+				<div class="landscapes">
+					<a href="https://www.instagram.com/p/BZAgstmApJE/?taken-by=elvis._.ma" target="_blank">
+						<img src="portfolio/edwinbokehOptimized.jpg" alt="guy sitting in front of a firepit" onmouseover="enlargeImage(this)" onmouseout="unlargeImage(this)"/>
+					</a> 
+					<a href="https://www.instagram.com/p/BYxA3Kdghz2/?taken-by=elvis._.ma" target="_blank">
+					<img src="portfolio/neoncastleOptimized.jpg" alt="Chinatown" onmouseover="enlargeImage(this)" onmouseout="unlargeImage(this)"/>
+					</a>
+				</div>
+				<div class="portraits">
+					<img src="portfolio/katssuOptimized.jpg" alt="smiling Shiba Inu" onmouseover="enlargeImage(this)" onmouseout="unlargeImage(this)"/>
+					<img src="portfolio/leavesOptimized.jpg" alt="silhouette of leaves in front of sunset"onmouseover="enlargeImage(this)" onmouseout="unlargeImage(this)"/>
+					<img src="portfolio/katsubitingOptimized.jpg" alt="shiba inu biting a toy" onmouseover="enlargeImage(this)" onmouseout="unlargeImage(this)"/>
+				</div>
+				<div class="landscapes">
+					<img src="portfolio/starsOptimized.jpg" alt="stars with a shooting star" onmouseover="enlargeImage(this)" onmouseout="unlargeImage(this)"/>
+					<img src="portfolio/bokehOptimized.jpg" alt="leaves" onmouseover="enlargeImage(this)" onmouseout="unlargeImage(this)"/>
+				</div>
+				<div class="portraits">
+					<img src="portfolio/lightbuildingOptimized.jpg" alt="building with lights" onmouseover="enlargeImage(this)" onmouseout="unlargeImage(this)"/>
+					<img src="portfolio/windowrainOptimized.jpg" alt="window with rain" onmouseover="enlargeImage(this)" onmouseout="unlargeImage(this)"/>
+					<img src="portfolio/bankOptimized.jpg" alt="US bank tower" onmouseover="enlargeImage(this)" onmouseout="unlargeImage(this)"/>
+				</div>
+				<div class="landscapes">
+					<img src="portfolio/alleytimOptimized.jpg" alt="silhouette of a guy in alley" onmouseover="enlargeImage(this)" onmouseout="unlargeImage(this)"/>
+					<img src="portfolio/skybuildingOptimized.jpg" alt="low angle photo of a building" onmouseover="enlargeImage(this)" onmouseout="unlargeImage(this)"/>
+				</div>
+				<a href="https://www.instagram.com/elvis._.ma/?hl=en" target="_blank">
+					<img src="visit/instagramMini.png" id="instagramMini"/>
+				</a>
+			</center>
+		</div>
+		
+	</body>
+</html>

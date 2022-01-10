@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html id="homePage">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="description" content="Portfolio of Elvis Ma, a photographer and filmmaker located in Los Angles"/>
+		<title>Elvis Ma Photography</title> 
+		<link rel="stylesheet" type="text/css" href="ElvisMa.css" />	
+		<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+		<link rel="shortcut icon" href="web/favicon.ico" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+		</script>
+		<script>
+			var go = false;
+			var startTimers;
+			function changeBackgroundIn() {
+				$("#blueLogo").css({"display":"block"});
+				$("#blueLogo").animate({left: "10px"},200).promise().done(function() { logoOut();});
+				document.getElementById("buttonPo").style.backgroundColor = "white";
+				document.getElementById("buttonPo").style.color = "black";
+			}	
+			function changeBackgroundOut() {
+				document.getElementById("buttonPo").style.backgroundColor = "transparent";
+				document.getElementById("buttonPo").style.color = "white";
+			}
+			function changeBackgroundClick() {
+				document.getElementById("buttonPo").style.border = "2px solid white";
+			}
+			function logoOut() {
+				$("#blueLogo").animate({left: "0px"},200)
+				$("#blueLogo").css({"display":"none"});
+			}
+			function fadeBackground() {
+				$("#homePage").fadeIn();
+				$("nav").fadeIn();
+				$("#home").slideDown();
+			}	
+			window.onload = function() {
+				fadeBackground();
+			}
+		</script>
+	</head>
+	<body>
+		<div id="blueLogo"></div>
+		<div id="logo"> </div> 
+		<center><div id="home"/><span id="italicize">Photographer and filmmaker based in Los Angeles</span> </div></center>
+		<nav id="buttonNav">
+			<!--<center><div id="portfolioNav">
+				<center><a href="portfolio.html">PORTFOLIO</a></center>
+			</div></center>-->
+			<center><a href="portfolio.html" id="buttonP"><input id="buttonPo" type="button" value="PORTFOLIO"  onmouseover="changeBackgroundIn()" onmouseout="changeBackgroundOut()" onclick="changeBackgroundClick()"></a></center>
+		</nav>
+	</body>
+</html>
