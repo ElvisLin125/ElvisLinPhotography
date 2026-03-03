@@ -39,13 +39,11 @@
 										class="mediaPic" src="visit/youtube-elvis.PNG"></a></td>
 							<td><a href="https://www.youtube.com/@lyricimpulse" target="_blank"><img id="youtubeMusic"
 										class="mediaPic" src="visit/youtube-music.PNG"></a></td>
-							<td><img id="email" class="mediaPic" src="visit/email.png" /></td>
 						</tr>
 						<tr class="mediaName">
 							<td>Instagram</td>
 							<td>Films</td>
 							<td>Music</td>
-							<td>elvis.125.ma@gmail.com</td>
 						</tr>
 					</table>
 				</div>
@@ -55,7 +53,7 @@
 			<p class="maintext" id="contactText"><span class="name">Feel Free</span><br> to contact me through Youtube,
 				Instagram, or Email. Follow me on social media to see more of my work by clicking the links above.</p>
 			<div id="contactForm">
-				<form>
+				<form id="contactFormElement">
 					<fieldset id="emailInput">
 						<legend class="maintext" class="name">Contact Me</legend>
 						<input type="text" placeholder="Name">
@@ -67,8 +65,22 @@
 						<input type="submit" id="submitButton" value="Submit" />
 					</fieldset>
 				</form>
+				<p class="maintext" id="contactThanks" style="display: none; margin-top: 20px;">Thank you for reaching out!
+					I really appreciate your message and will get back to you as soon as I can.</p>
 			</div>
 		</div>
+		<script>
+			const contactFormElement = document.getElementById("contactFormElement");
+			const contactThanks = document.getElementById("contactThanks");
+
+			if (contactFormElement && contactThanks) {
+				contactFormElement.addEventListener("submit", function (event) {
+					event.preventDefault();
+					contactFormElement.style.display = "none";
+					contactThanks.style.display = "block";
+				});
+			}
+		</script>
 </body>
 
 </html>
